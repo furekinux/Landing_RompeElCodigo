@@ -959,7 +959,7 @@ select {
 }
 
 .stat-value {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 500;
   color: var(--color-kinetic-dark);
