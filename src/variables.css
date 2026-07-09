@@ -1,0 +1,90 @@
+/* Fuentes */
+@font-face {
+    font-family: "Poppins-Black";
+    src: url(../Fuentes/Poppins/Poppins-Black.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Black-Italic";
+    src: url(../Fuentes/Poppins/Poppins-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../Fuentes/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold-Italic";
+    src: url(../Fuentes/Poppins/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: url(../Fuentes/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBold-Italic";
+    src: url(../Fuentes/Poppins/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url(../Fuentes/Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-ExtraLight-Italic";
+    src: url(../Fuentes/Poppins/Poppins-ExtraLightItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url(../Fuentes/Poppins/Poppins-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Light";
+    src: url(../Fuentes/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Light-Italic";
+    src: url(../Fuentes/Poppins/Poppins-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url(../Fuentes/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Medium-Italic";
+    src: url(../Fuentes/Poppins/Poppins-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../Fuentes/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(../Fuentes/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold-Italic";
+    src: url(../Fuentes/Poppins/Poppins-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Thin";
+    src: url(../Fuentes/Poppins/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Thin-Italic";
+    src: url(../Fuentes/Poppins/Poppins-ThinItalic.ttf);
+}
