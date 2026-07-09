@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rompe el código</title>
+
+    <link rel="stylesheet" href="./src/index.css">
+    <script type="module" src="./src/main.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Background Grid Lines Overlay y puntos del fondo -->
+    <div class="fixed-overlay overlay-stars"></div>
+    <div class="fixed-overlay overlay-grid"></div>
+
+    <!-- Notificacion -->
+    <div id="global-toast"
+        style="position: fixed; bottom: 24px; right: 24px; z-index: 50; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(80px); opacity: 0; pointer-events: none;">
+        <div
+            style="background: linear-gradient(to right, var(--color-kinetic-dark), #000030); color: var(--color-neutral-warm); border: 1px solid rgba(37, 211, 102, 0.4); padding: 12px 20px; border-radius: 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+            <span
+                style="height: 10px; width: 10px; border-radius: 50%; background-color: var(--color-whatsapp-green); display: inline-block;"></span>
+            <p id="global-toast-text"
+                style="font-size: 11px; font-family: var(--font-sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin: 0;">
+                Notificación del Sistema</p>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <nav class="nav-header">
+        <div class="nav-desktop-container">
+            <!-- Titulos nav bar -logo eliminado -->
+            <div class="logo-container">
+                <div class="nav-links">
+                    <button id="nav-link-inicio" class="nav-link active">Inicio</button>
+                    <button id="nav-link-nosotros" class="nav-link">Nosotros</button>
+                    <button id="nav-link-cronograma" class="nav-link">Cronograma</button>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Btn CTA -->
+                <button id="navbar-btn-postulacion" class="btn-nav-register">
+                    Postularse aquí
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO SECTION (Imagen grande) -->
+
+        <!-- Antes habia un video, por eso se nombra -->
+        <section id="inicio" class="hero-wrapper">
+            <div class="hero-video-container">
+                <img id="hero-video" src="./Assets/background.jpg" alt="Rompe el codigo" class="logo-text"
+                    style="width: 100%; opacity: 0.8; height: 100%;" />
+
+                <!-- Video Overlay Controls and CTAs -->
+                <div class="hero-content">
+                    <!-- Top bar: basic control toggles -->
+                    <div class="video-controls-top">
+                        <div class="controls-actions">
+
+                        </div>
+                    </div>
+
+                    <div class="hero-center-content">
+                        <h1 class="hero-center-title"> ROMPE EL CÓDIGO </h1>
+                        <p class="hero-center-sub text-neutral-warm">Becas para formarte en tecnología. Postula a uno o
+                            a varios de los programas gratuitos, con clases online en vivo y prácticas presenciales en
+                            Santander.</p>
+
+                        <div class="hero-center-btns">
+                            <button id="hero-btn-explore" class="btn-hero-explore">
+                                Manual del postulante
+                            </button>
+
+                            <button id="hero-btn-apply" class="btn-hero-apply">
+                                Quiero postularme
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BARRA DE LOGOS -->
+        <section class="logo-marquee-section">
+            <div class="logo-marquee-mask">
+                <div id="logo-marquee" class="logo-marquee">
+                    <div class="logo-chip"><img src="./Assets/BID.png" alt="BID"></div>
+                    <div class="logo-chip"><img src="./Assets/Ministerio.png" alt="Ministerio de Ciencia""></div>
+                    <div class=" logo-chip">
+                        <div class="uis-img"><img src="./Assets/Uis.png" alt="UIS"></div>
+                    </div>
+                    <div class="logo-chip"><img src="./Assets/KTPA.png" alt="KTPA"></div>
+                    <div class="logo-chip">
+                        <div class="campus-img"><img src="./Assets/LogoCampus.png" alt="Campuslands"></div>
+                    </div>
+                    <div class="logo-chip"><img src="./Assets/Eurecat.png" alt="Eurecat"></div>
+                    <div class="logo-chip"><img src="./Assets/BID.png" alt="BID"></div>
+                    <div class="logo-chip"><img src="./Assets/Ministerio.png" alt="Ministerio de Ciencia"></div>
+                    <div class="logo-chip">
+                        <div class="uis-img"><img src="./Assets/Uis.png" alt="UIS"></div>
+                    </div>
+                    <div class="logo-chip"><img src="./Assets/KTPA.png" alt="KTPA"></div>
+                    <div class="logo-chip">
+                        <div class="campus-img"><img src="./Assets/LogoCampus.png" alt="Campuslands"></div>
+                    </div>
+                    <div class="logo-chip"><img src="./Assets/Eurecat.png" alt="Eurecat"></div>
+                    <div class="logo-chip"><img src="./Assets/BID.png" alt="BID"></div>
+                    <div class="logo-chip"><img src="./Assets/Ministerio.png" alt="Ministerio de Ciencia"></div>
+                    <div class="logo-chip">
+                        <div class="uis-img"><img src="./Assets/Uis.png" alt="UIS"></div>
+                    </div>
+                    <div class="logo-chip"><img src="./Assets/KTPA.png" alt="KTPA"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDS PRESENTACIÓN -->
+        <section class="section-bento">
+            <!-- Mesh Gradients for background -->
+            <div class="ambient-glow-l"></div>
+            <div class="ambient-glow-r"></div>
+
+            <!-- Cards presentación -->
+            <div class="bento-container">
+                <!-- Columna izquierda -->
+                <div class="bento-card-left glass-card">
+                    <div>
+
+                        <h2 class="bento-title text-bold-gradient">
+                            Becas de formación en tecnología para el talento de Santander
+                        </h2>
+                        <p class="bento-paragraph">
+                            “Rompe el código” es un programa ejecutado por el BID en el marco un un proyexto lara impulsar el ecosistema TI de Santander. El programa te da accesos gratuito a tres programas formativos independientes; postula al que mejor se adapte a tu perfil o a más de uno, y desarrolla competencias reales del sector tech con acompañamiento de docentes y mentores. Eurecat, Eurecat Latam y Campuslands participan en la ejecución como entidades expertas.
+                        </p>
+                    </div>
+
+                    <!-- Mini Galería Deslizable -->
+                    <div class="mini-galeria-contenedor">
+                        <div id="mini-galeria-wrapper" class="mini-galeria-wrapper">
+                            <!-- Imagen 1 -->
+                            <div class="mini-galeria-item">
+                                <img src="./Assets/Comunidad.jpg" alt="Comunidad" class="mini-galeria-imagen" />
+                            </div>
+                            <!-- Imagen 2 -->
+                            <div class="mini-galeria-item">
+                                <img src="./Assets/Mural.png" alt="We heard your story" class="mini-galeria-imagen" />
+                                <div class="mini-galeria-info">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button id="hero-discover-card" class="bento-btn-discover">
+                        Descubre sobre nosotros
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="bento-card-right-grid">
+                    <div class="bento-card-left glass-card">
+                        <h2 class="bento-title text-bold-gradient">¿Qué incluye?</h2>
+
+                        <p class="bento-paragraph">
+                            • Beca 100% gratuita. <br>
+                            • Tres programas para elegir, con certificación independiente por cada uno que
+                            completes.<br>
+                            • Modalidad híbrida: clases en vivo en línea + prácticas presenciales en Santander.<br>
+                            • Acompañamiento cercano de docentes y mentores de Eurecat y Campuslands.<br>
+                            • Proyectos prácticos reales según el programa.<br>
+                            • Plataforma de aprendizaje (LMS) y comunidad de apoyo (WhatsApp y Discord).<br>
+                            • Herramientas de inteligencia artificial aplicadas a tu aprendizaje, con un marco de uso
+                            ético.</p>
+
+                        <h2 class="bento-title text-bold-gradient">Características</h2>
+                        <p class="bento-paragraph">
+                            • Tres programas independientes: técnico (80 h), marcos ágiles (40 h) y comunicación
+                            estratégica (40 h). <br>
+                            • Sesiones sincrónicas en vivo con prácticas presenciales en sede.<br>
+                            • Horarios pensados para compaginar con trabajo o estudios.<br>
+                            • Certificación independiente por cada programa que completes.<br>
+                            • Cupos limitados: 185 estudiantes en total.<br>
+                            • Dirigido a residentes de Santander o a quienes puedan asistir a las sesiones presenciales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Barra de detalles-->
+        <section class="section-stats">
+            <div class="stats-mesh-center"></div>
+
+            <div class="stats-card-main glass-card">
+                <div class="stats-grid">
+                    <!-- Stat 1 -->
+                    <div id="stat-card-0" class="stat-item">
+                        <!-- Icon de usuario -->
+                        <div class="stat-icon" style="color: var(--color-sky-blue);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-value">3 Programas</span>
+                        <span class="stat-label">Para estudiar</span>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div id="stat-card-1" class="stat-item">
+                        <!-- Premio Icon -->
+                        <div class="stat-icon" style="color: #facc15;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <span class="stat-value">Hasta 3
+                        </span>
+                        <span class="stat-label">Certificaciones</span>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div id="stat-card-2" class="stat-item">
+                        <!-- Maletin Icon -->
+                        <div class="stat-icon" style="color: var(--color-whatsapp-green);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-value">185</span>
+                        <span class="stat-label">Cupos disponibles</span>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div id="stat-card-3" class="stat-item">
+                        <!-- Handshake Icon -->
+                        <div class="stat-icon" style="color: var(--color-light-sky);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-value">100%</span>
+                        <span class="stat-label">Beca (gratuita)</span>
+                    </div>
+                </div>
+
+
+                <div class="stats-analysis-box">
+                    <div id="stats-dynamic-detail" class="stats-dynamic-detail">
+                        <div class="metricas-hover-prompt">
+                            Más detalles
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="programs-mentors-background">
+            <!-- CARDS VERTICALES DE MODULOS -->
+            <section id="programas" class="section-programs">
+                <div class="ambient-glow-l" style="top: 50%; left: 0;"></div>
+
+                <div class="programs-header-block">
+                    <div>
+                        <span class="programs-meta-tag">Tres programas para postular</span>
+                        <h2 class="programs-title ">
+                            Elige el que se ajuste a ti ¡o postula a más de uno!
+                        </h2>
+                    </div>
+
+                    <!-- Flechas de deslizables -->
+                    <div class="carousel-controllers">
+                        <button type="button" id="carousel-btn-left" class="carousel-arrow" aria-label="Desplazar a la izquierda">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </button>
+                        <button type="button" id="carousel-btn-right" class="carousel-arrow" aria-label="Desplazar a la derecha">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scrollable horizontal de las cards-->
+                <div id="programs-carousel-container" class="programs-carousel-container no-scrollbar">
+
+                    <!-- Card: programa 1 -->
+                    <div id="program-card-software-dev" class="program-card" tabindex="0">
+                        <img class="program-card-img" src="./Assets/SalonClases.jpeg" alt="Desarrollo de Software" />
+                        <div class="program-card-overlay"></div>
+                        <div class="program-card-content">
+
+                            <h3 class="program-card-title font-sugo">
+                                Desarrollo de Software con Python, apoyado por IA (80 horas)
+                            </h3>
+                            <p class="program-card-sub">
+                                Ideal si quieres iniciarte en programación. Aprende lógica y estructuras de datos,
+                                Python,
+                                control de versiones con Git y GitHub, bases de datos con SQL, análisis de datos con
+                                Pandas,
+                                construcción de APIs, pruebas y despliegue en la nube. Todo con apoyo de herramientas de
+                                IA
+                                bajo un marco de uso ético.
+                            </p>
+                        </div>
+                        <div class="program-bottom-bar"></div>
+                    </div>
+
+                    <!-- Card: Marcos de Trabajo Ágiles -->
+                    <div id="program-card-ai-engineering" class="program-card" tabindex="0">
+                        <img class="program-card-img" src="./Assets/MetodologiasAgiles.JPEG"
+                            alt="Marcos de Trabajo Ágiles" />
+                        <div class="program-card-overlay"></div>
+                        <div class="program-card-content">
+                            <h3 class="program-card-title font-sugo">
+                                Marcos de trabajo ágiles (40 horas)
+
+                            </h3>
+                            <p class="program-card-sub">
+                                Para perfiles con interés en la gestión de proyectos, equipos o producto. Domina Scrum y
+                                Kanban, métricas de flujo, acuerdos de equipo y resolución de conflictos, retrospectivas
+                                efectivas, ciclo de vida del producto y fundamentos de Product Ops, con sprints
+                                simulados y
+                                tableros digitales.
+                            </p>
+                        </div>
+                        <div class="program-bottom-bar"></div>
+                    </div>
+
+                    <!-- Card: Comunicación Estratégica -->
+                    <div id="program-card-english" class="program-card" tabindex="0">
+                        <img class="program-card-img" src="./Assets/HabilidadesBlandas.jpg"
+                            alt="Comunicación Estratégica" />
+                        <div class="program-card-overlay"></div>
+                        <div class="program-card-content">
+
+                            <h3 class="program-card-title font-sugo">
+                                Comunicación estratégica (40 h)
+                            </h3>
+                            <p class="program-card-sub">
+                                Para quienes presentan ideas e interactúan con clientes o stakeholders. Traduce lo
+                                técnico
+                                en valor: storytelling técnico, demos de producto, visualización de datos, pitch y
+                                manejo de
+                                Q&A, inteligencia emocional y manejo de estrés, cultura de feedback y comunicación
+                                escrita
+                                técnica, con talleres de oratoria presenciales.
+                            </p>
+
+                        </div>
+                        <div class="program-bottom-bar"></div>
+                    </div>
+
+                    <div id="program-card-adaptive" class="program-card" tabindex="0">
+                        <img class="program-card-img" src="./Assets/EntradaCampus.png" alt="Tech Innovation" />
+                        <div class="program-card-overlay"></div>
+                        <div class="program-card-content">
+
+                            <h3 class="program-card-title font-sugo">
+                                ¿Puedo cursar más de un programa?
+                            </h3>
+                            <p class="program-card-sub">
+                                Al postular podrás elegir más de un programa. Durante el proceso de selección
+                                evaluaremos si
+                                tu perfil se ajusta a la exigencia requerida para cursar más de uno.
+
+                        </div>
+                        <div class="program-bottom-bar"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- NOSOTROS -->
+            <section id="metodologia" class="section-essence">
+                <div class="essence-mesh-r"></div>
+
+                <div class="essence-container">
+                    <!-- Text column -->
+                    <div class="essence-info">
+                        <span class="essence-meta">SOBRE EL PROGRAMA</span>
+                        <h2 class="essence-title text-bold-gradient" id="nosotros">
+                            Nuestro compromiso
+                        </h2>
+
+                        <div class="essence-quote">
+                            <p>
+                                Creemos que el talento está en todas partes, las oportunidades también deben estarlo.
+                            </p>
+                        </div>
+
+                        <div class="essence-specs-grid">
+                            <div class="spec-item">
+                                <!-- Simbolo para propósito -->
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    style="color: var(--color-whatsapp-green); flex-shrink: 0; margin-top: 4px;"
+                                    width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="spec-info-title">PROPÓSITO</h4>
+                                    <p class="spec-info-desc"> Formar talento tech en Santander con estándares
+                                        internacionales, conectando el aprendizaje con las necesidades reales de la
+                                        industria.</p>
+                                </div>
+                            </div>
+
+                            <div class="spec-item">
+                                <!-- Simbolo para enfoque -->
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    style="color: var(--color-sky-blue); flex-shrink: 0; margin-top: 4px;" width="18"
+                                    height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                                </svg>
+                                <div>
+                                    <h4 class="spec-info-title">ENFOQUE</h4>
+                                    <p class="spec-info-desc">Aprendizaje práctico, acompañamiento continuo de mentores
+                                        y
+                                        proyectos que puedes mostrar. Ningún perfil queda excluido: valoramos tu aptitud
+                                        y
+                                        tu motivación.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Requisitos card (uso layout de sección essence) -->
+                    <div class="section-essence-right-card">
+                        <div class="bento-card-left glass-card">
+                            <h2 class="bento-title text-bold-gradient">REQUISITOS</h2>
+
+                            <p class="bento-paragraph">
+                                • Haber completado el bachillerato.<br>
+                                • Residir en Santander o poder asistir a las sesiones presenciales en la sede de
+                                Campuslands.<br>
+                                • Manejo básico de computador e internet.<br>
+                                • Contar con un equipo con conexión a internet estable para las sesiones y las
+                                prácticas.<br>
+                                • Completar las pruebas de selección (lógica matemática, computación básica y test de
+                                perfil) y una breve validación telefónica.<br>
+                                • Perfil específico por curso
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- MENTORES -->
+            <section id="comunidad" class="section-testimonials">
+                <div class="testimonials-mesh-r"></div>
+
+                <div class="text-center-block">
+                    <h2 class="programs-title text-bold-gradient" style="font-size: 45px;">
+                        MENTORES
+                    </h2>
+                    <p class="testimonials-paragraph"
+                    style="font-size: 18px; margin-left:auto; margin-right:auto; max-width:720px;">
+                    Conoce más sobre los mentores que te acompañarán en tu proceso de aprendizaje y desarrollo de proyectos.
+                </p>
+                </div>
+
+                <div class="testimonials-carousel-container">
+                    <div class="carousel-controllers">
+                        <button id="mentor-carousel-btn-left" class="carousel-arrow" aria-label="Desplazar a la izquierda">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </button>
+                        <button id="mentor-carousel-btn-right" class="carousel-arrow" aria-label="Desplazar a la derecha">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="mentors-carousel-wrapper" class="mentors-carousel-wrapper no-scrollbar">
+                        <!-- Mentor 1 -->
+                        <div class="testimonial-reel-card" tabindex="0">
+                            <img class="testimonial-bg-img" src="./Assets/Mentor-Cristian.jpeg" alt="Mentor 1" />
+                            <div class="testimonial-overlay-fade"></div>
+
+                            <div class="testimonial-identity-meta">
+                                <h4 class="testimonial-name">Cristian Díaz Tovar</h4>
+                                <p class="testimonial-info-mentor">Módulo 1. Ingeniero de sistemas (Campuslands);
+                                    especialista en formación práctica en programación, bases de datos y buenas
+                                    prácticas de ingeniería de software.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mentor 2 -->
+                        <div class="testimonial-reel-card" tabindex="0">
+                            <img class="testimonial-bg-img" src="./Assets/Mentor-Francisco.jpeg" alt="Mentor 2" />
+                            <div class="testimonial-overlay-fade"></div>
+
+                            <div class="testimonial-identity-meta">
+                                <h4 class="testimonial-name">Francisco Capone</h4>
+                                <p class="testimonial-info-mentor">Módulo 2-a. Ingeniero Informático de la Universidad Santa María con más de 15 años de experiencia liderando la transformación digital de equipos y productos en industrias de alta criticidad como Banca, Finanzas, Salud y Retail.  Especialista en el diseño de arquitecturas Cloud (GCP, Azure, AWS), adopción de tecnologías JavaScript (NodeJS, ReactJS) y el escalado de metodologías ágiles.
+</p>
+                            </div>
+                        </div>
+
+                        <!-- Mentor 3 -->
+                        <div class="testimonial-reel-card" tabindex="0">
+                            <img class="testimonial-bg-img" src="./Assets/Mentor-Wilfredo.jpeg" alt="Mentor 3" />
+                            <div class="testimonial-overlay-fade"></div>
+
+                            <div class="testimonial-identity-meta">
+                                <h4 class="testimonial-name">Wilfredo Acosta</h4>
+                                <p class="testimonial-info-mentor">Módulo 2-b. Product Designer y Digital Product Manager, Diseñador Gráfico de formación con dos maestrías en Experiencia de Usuario y Product Management, y más de 15 años de experiencia liderando el diseño de productos digitales, la investigación de usuarios y la experiencia de usuario para industrias de alto impacto como Seguros, Aviación y Carga, Banca y Pagos Online, Energía y Retail.
+</p>
+                            </div>
+                        </div>
+
+                        <!-- Mentor 4 -->
+                        <div class="testimonial-reel-card" tabindex="0">
+                            <img class="testimonial-bg-img" src="./Assets/Mentor-Javier.png" alt="Mentor 4" />
+                            <div class="testimonial-overlay-fade"></div>
+
+                            <div class="testimonial-identity-meta">
+                                <h4 class="testimonial-name">Javier Arratia</h4>
+                                <p class="testimonial-info-mentor">Módulo 2-b. Comunicador Social y Diseñador Instruccional, con formación complementaria como Diseñador UX/UI y desarrollador Full Stack, y 5 años de experiencia liderando el diseño y desarrollo de programas bajo metodologías ágiles (Scrumban) para el mercado latinoamericano.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- CRONOGRAMA DE GRUPOS -->
+        <section id="postulacion" class="section-postulacion">
+            <div class="postulacion-mesh-b"></div>
+
+            <div class="postulacion-container">
+                <h2 class="programs-title text-bold-gradient" style="font-size: 50px; margin-bottom: 16px;">
+                    Cronograma
+                </h2>
+                <p class="testimonials-paragraph"
+                    style="font-size: 18px; margin-left:auto; margin-right:auto; max-width:720px; margin-bottom: 48px;">
+                    Detalles sobre fechas, grupos y horarios
+                </p>
+
+                <div class="schedule-table-wrapper">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Módulo</th>
+                                <th>Grupo curso</th>
+                                <th>Horario</th>
+                                <th>Fecha de inicio</th>
+                                <th>Fecha de finalización</th>
+                                <th>Feriados</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">Desarrollo de Software con Python apoyado por IA</td>
+                                <td>1</td>
+                                <td>Lunes a jueves de 6:00 a 8:00 horas.<br><em>Cuando el lunes sea feriado las clases
+                                        se ejecutarán de martes a viernes.</em></td>
+                                <td>03 de agosto</td>
+                                <td>08 de octubre</td>
+                                <td>17 de agosto (lunes)</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lunes a jueves de 10:00 a 12:00 horas.<br><em>Cuando el lunes sea feriado las clases
+                                        se ejecutarán de martes a viernes.</em></td>
+                                <td>03 de agosto</td>
+                                <td>08 de octubre</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Lunes a jueves de 14:00 a 16:00 horas.<br><em>Cuando el lunes sea feriado las clases
+                                        se ejecutarán de martes a viernes.</em></td>
+                                <td>03 de agosto</td>
+                                <td>08 de octubre</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Agilidad aplicada: Equipos, Flujo y Mejora Continua</td>
+                                <td>1</td>
+                                <td>Lunes y miércoles de 18:00 a 22:00 horas.<br>Sesiones presenciales: 18:00 a 20:00
+                                    horas.<br>Sesión presencial final: Sábado de 09:00 a 13:00 horas.</td>
+                                <td>31 de agosto</td>
+                                <td>03 de octubre</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Martes y jueves de 18:00 a 22:00 horas.<br>Sesiones presenciales: 18:00 a 20:00
+                                    horas.<br>Sesión presencial final: Sábado de 09:00 a 13:00 horas.</td>
+                                <td>01 de septiembre</td>
+                                <td>03 de octubre</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Comunicación Técnica y el Storytelling de Negocios</td>
+                                <td>1</td>
+                                <td>Lunes y miércoles de 18:00 a 22:00 horas.<br><em>Cuando el lunes sea feriado las
+                                        clases se ejecutarán miércoles y viernes.</em></td>
+                                <td>05 de octubre</td>
+                                <td>04 de noviembre</td>
+                                <td>12 de octubre (lunes)</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Martes y jueves de 18:00 a 22:00 horas.</td>
+                                <td>06 de octubre</td>
+                                <td>05 de noviembre</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- BTN POSTULARSE -->
+
+        <!-- Antes era un btn de whatsapp, por eso las clases con "wa" -->
+
+        <section class="section-cta-whatsapp">
+            <div class="wa-cta-mesh-center"></div>
+            <div class="wa-cta-container">
+                <h2 class="wa-cta-title" style="font-size: 35px; font-style:italic;">
+                    Tu lugar en el mundo tech empieza aquí
+                </h2>
+
+                <a id="cta-whatsapp-open" class="btn-whatsapp-open font-sugo"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfsaddZB-6TpueTyVQSOxBAgX-oehBQBmMsXfofgWRZzPAw5g/viewform?usp=sharing&ouid=100294761082486334027"
+                    target="_blank" rel="noopener noreferrer">
+                    <span>Postularse aquí</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-logo-block">
+                <p class="footer-copyright">
+                    © 2026 CAMPUSLANDS. Todos los derechos reservados. <br />
+            </div>
+            <div class="footer-links-grid">
+                <a href="#" id="footer-link-privacidad" class="footer-link">Políticas de Privacidad</a>
+                <a href="#" id="footer-link-terminos" class="footer-link">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- PROGRAM MODAL -->
+    <div id="program-modal" class="program-modal-wrapper">
+        <div id="program-modal-backdrop" class="modal-backdrop"></div>
+
+        <div class="modal-dialog">
+            <!-- Close button -->
+            <button id="program-modal-close" class="btn-close-modal" aria-label="Cerrar modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-body-layout">
+                <!-- Portrait Image side -->
+                <div class="modal-portrait-side">
+                    <img id="p-modal-image" class="modal-portrait-img" src="" alt="" />
+                    <div class="modal-portrait-fade"></div>
+                </div>
+
+                <!-- Content side -->
+                <div class="modal-content-side">
+                    <div>
+                        <span class="modal-meta-tag">Detalles del programa</span>
+                        <h3 id="p-modal-title" class="modal-title font-sugo"></h3>
+                        <p id="p-modal-subtitle" class="modal-sub-slogan"></p>
+                        <p id="p-modal-description" class="modal-desc-p"></p>
+
+                        <div class="modal-specs-table">
+                            <div>
+                                <span class="modal-spec-label">Duración</span>
+                                <span id="p-modal-duration" class="modal-spec-val"></span>
+                            </div>
+                            <div>
+                                <span class="modal-spec-label">Proyección salarial</span>
+                                <span id="p-modal-salary" class="modal-spec-val"></span>
+                            </div>
+                        </div>
+
+                        <div class="modal-details-lists">
+                            <div>
+                                <span class="modal-list-title-badge">Habilidades clave</span>
+                                <ul id="p-modal-skills-list" class="modal-competencies-list"></ul>
+                            </div>
+                            <div>
+                                <span class="modal-list-title-badge">Mentores del módulo</span>
+                                <div id="p-modal-mentors-list" class="modal-mentors-list"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="p-modal-apply-btn" class="btn-modal-apply">
+                        Postularme a este programa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POLICIES MODAL -->
+    <div id="policies-modal" class="program-modal-wrapper">
+        <div id="policies-modal-backdrop" class="modal-backdrop"></div>
+
+        <div class="modal-dialog" style="max-width: 680px;">
+            <!-- Close button -->
+            <button id="policies-modal-close" class="btn-close-modal" aria-label="Cerrar modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-content-side">
+                <span class="modal-meta-tag">POLÍTICAS Y CONDICIONES</span>
+                <h3 class="modal-title font-sugo" style="font-size: 30px; margin-bottom: 20px;">CAMPUSLAND S.A.S. BIC
+                </h3>
+
+                <!-- Tabs Headers -->
+                <div class="policies-tabs-header"
+                    style="display: flex; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; margin-bottom: 20px; overflow-x: auto;">
+                    <button class="policy-tab-btn active" data-tab="terminos">Términos y Condiciones</button>
+                    <button class="policy-tab-btn" data-tab="tratamiento">Tratamiento de Datos</button>
+                    <button class="policy-tab-btn" data-tab="privacidad">Aviso de Privacidad</button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="policies-tabs-content" style="max-height: 400px; overflow-y: auto; padding-right: 8px;">
+                    <!-- Tab: Terminos -->
+                    <div id="policy-content-terminos" class="policy-tab-pane active">
+                        <h4
+                            style="color: var(--color-sky-blue); font-size: 16px; margin-bottom: 12px; font-weight: 600;">
+                            Términos y
+                            Condiciones de Uso</h4>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            El presente documento establece los Términos y Condiciones bajo los cuales se regula el
+                            acceso y uso de la
+                            plataforma académica, el sitio web y todos los servicios ofrecidos por <strong>CAMPUSLAND
+                                S.A.S.
+                                BIC</strong> (en adelante "CAMPUSLAND"). Al acceder, navegar o utilizar este sitio web,
+                            así como al
+                            postularse a nuestros programas de inmersión, el usuario acepta de manera expresa y sin
+                            reservas los
+                            términos aquí descritos.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>1. Objeto y Alcance:</strong> CAMPUSLAND es una sociedad de Beneficio e Interés
+                            Colectivo (BIC)
+                            constituida bajo las leyes colombianas, dedicada a la formación intensiva de alta calidad en
+                            desarrollo de
+                            software, tecnologías de inteligencia artificial, inglés técnico y habilidades de liderazgo
+                            adaptativo. El
+                            uso de la plataforma tiene como finalidad la consulta de información de programas y la
+                            postulación formal
+                            de candidatos.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>2. Proceso de Postulación y Registro:</strong> La inscripción realizada a través de
+                            esta landing
+                            page constituye una solicitud voluntaria de admisión. CAMPUSLAND se reserva el derecho
+                            autónomo de evaluar
+                            y seleccionar los perfiles idóneos para cada cohorte técnica basándose en criterios
+                            académicos, pruebas
+                            lógicas, psicotécnicas y entrevistas motivacionales.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>3. Propiedad Intelectual:</strong> Todos los contenidos académicos, interfaces,
+                            códigos fuente,
+                            diseños gráficos, videos promocionales, imágenes, logos y metodologías pedagógicas
+                            incorporadas en el
+                            ecosistema son propiedad intelectual exclusiva de CAMPUSLAND S.A.S. BIC y están protegidos
+                            por las normas
+                            de derechos de autor nacionales e internacionales. Queda terminantemente prohibida cualquier
+                            reproducción,
+                            copia o distribución comercial no autorizada explícitamente y por escrito.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>4. Compromiso de Integridad Académica:</strong> El aspirante y estudiante registrado
+                            se compromete
+                            a suministrar información verídica y verificable, actuar con absoluta honestidad en el
+                            desarrollo de los
+                            retos del proceso de admisión, respetar las normas comunitarias del aula virtual y
+                            presencial, y
+                            contribuir activamente al ambiente de aprendizaje colectivo y colaborativo que caracteriza a
+                            la
+                            institución.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>5. Limitación de Responsabilidad:</strong> CAMPUSLAND trabaja continuamente para
+                            garantizar la
+                            mayor estabilidad, seguridad y actualización de sus portales web. Sin embargo, no se hace
+                            responsable por
+                            interrupciones temporales del servicio debidas a causas de fuerza mayor o fallas técnicas
+                            ajenas al
+                            control de la entidad.
+                        </p>
+                    </div>
+
+                    <!-- Tab: Tratamiento -->
+                    <div id="policy-content-tratamiento" class="policy-tab-pane">
+                        <h4
+                            style="color: var(--color-sky-blue); font-size: 16px; margin-bottom: 12px; font-weight: 600;">
+                            Política
+                            de Tratamiento de Datos Personales</h4>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            En cumplimiento de la legislación colombiana (Ley 1581 de 2012, Decreto 1377 de 2013 y demás
+                            normas
+                            concordantes), <strong>CAMPUSLAND S.A.S. BIC</strong> presenta su Política de Tratamiento de
+                            Datos
+                            Personales, garantizando la confidencialidad, seguridad e integridad del derecho al Habeas
+                            Data de todos
+                            nuestros aspirantes, estudiantes, mentores y egresados.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>1. Responsable del Tratamiento:</strong> CAMPUSLAND S.A.S. BIC, sociedad comercial
+                            legalmente
+                            constituida, identificada y con domicilio principal en el territorio de la República de
+                            Colombia.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>2. Finalidades de la Recolección y Tratamiento:</strong>
+                        </p>
+                        <ul
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px; padding-left: 20px; list-style-type: disc;">
+                            <li>Gestionar de forma integral el proceso de registro, postulación, evaluación y posterior
+                                admisión o
+                                descarte de los candidatos inscritos.</li>
+                            <li>Establecer contacto directo por medios físicos y digitales (llamadas de voz, correo
+                                electrónico y
+                                canales interactivos directos como mensajería de WhatsApp) para coordinar las pruebas
+                                técnicas y
+                                entrevistas.</li>
+                            <li>Informar de manera periódica novedades institucionales, lanzamientos de nuevas cohortes,
+                                becas,
+                                programas académicos y eventos de tecnología.</li>
+                            <li>Compartir perfiles de egresados destacados con empresas aliadas nacionales e
+                                internacionales para
+                                acelerar su vinculación laboral, en alineación con el propósito de beneficio social de
+                                nuestra condición
+                                de sociedad BIC.</li>
+                            <li>Realizar auditorías internas, análisis estadísticos sobre retención académica, niveles
+                                de inserción
+                                laboral y perfiles demográficos para el reporte anual de impacto BIC.</li>
+                        </ul>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>3. Derechos de los Titulares:</strong> De conformidad con la ley, todo titular de
+                            datos personales
+                            tratados por CAMPUSLAND cuenta con el derecho irrevocable de: conocer, actualizar,
+                            rectificar o solicitar
+                            la total supresión de sus datos de nuestras bases activas. De igual modo, podrá revocar en
+                            cualquier
+                            momento la autorización previamente otorgada para finalidades de contacto publicitario.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>4. Canales para el Ejercicio de Derechos:</strong> Los interesados podrán canalizar
+                            sus peticiones
+                            de consulta, reclamos, solicitudes de actualización o supresión de información remitiendo
+                            una comunicación
+                            formal detallando el caso específico a la dirección de correo electrónico institucional:
+                            <strong>privacidad@campuslands.com</strong> o mediante nuestra línea oficial de atención.
+                        </p>
+                    </div>
+
+                    <!-- Tab: Privacidad -->
+                    <div id="policy-content-privacidad" class="policy-tab-pane">
+                        <h4
+                            style="color: var(--color-sky-blue); font-size: 16px; margin-bottom: 12px; font-weight: 600;">
+                            Aviso de
+                            Privacidad</h4>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>CAMPUSLAND S.A.S. BIC</strong>, comprometida rigurosamente con la protección y el
+                            respeto por la
+                            privacidad de sus usuarios, emite este Aviso de Privacidad para informar de manera directa e
+                            inequívoca el
+                            uso de la información que es capturada a través de los portales de admisión de nuestra
+                            academia tech.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            Al diligenciar y enviar el formulario de inscripción, tú como aspirante autorizas de forma
+                            previa,
+                            voluntaria, explícita y debidamente informada el tratamiento de tus datos personales, los
+                            cuales
+                            corresponden a información meramente de identificación y contacto (Nombre completo, correo
+                            electrónico,
+                            número telefónico de WhatsApp y país de residencia).
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>Uso y Almacenamiento Seguro:</strong> CAMPUSLAND implementa robustas medidas de
+                            seguridad física,
+                            lógica y tecnológica para mitigar cualquier riesgo de acceso no autorizado, pérdida,
+                            alteración o
+                            distribución indebida de tus datos personales. La información de contacto recopilada se
+                            almacenará
+                            únicamente durante el período requerido para cumplir con el proceso de inducción pedagógica
+                            y el
+                            desarrollo del programa académico, respetando los límites normativos colombianos vigentes.
+                        </p>
+                        <p
+                            style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 12px;">
+                            <strong>Consulta de Políticas Ampliadas:</strong> Si deseas profundizar sobre los
+                            procedimientos de
+                            tratamiento de bases de datos de CAMPUSLAND S.A.S. BIC o requieres ejercer tus derechos de
+                            Habeas Data, te
+                            invitamos a consultar la pestaña de "Tratamiento de Datos" en esta misma ventana, o a
+                            formular un
+                            requerimiento dirigido al buzón de contacto oficial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
