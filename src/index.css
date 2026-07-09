@@ -2457,7 +2457,7 @@ select {
   }
 
   .stat-value {
-    font-size: 64px;
+    font-size: 55px;
   }
 
   .stat-item:nth-child(n + 3) {
