@@ -239,36 +239,67 @@ select {
   transform: translateY(-1px);
 }
 
-.logo-marquee-section {
+.logo-grid-section {
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
-  padding: 22px 0;
+  padding: 32px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(148, 180, 196, 0.18);
-  overflow: hidden;
 }
 
-.logo-marquee-mask {
-  width: 100%;
-  max-width: 100%;
+.logo-grid-container {
+  max-width: 1160px;
   margin: 0 auto;
-  overflow: hidden;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
 }
 
-.logo-marquee {
+.logo-card-wrapper {
+  width: 100%;
+  padding: 28px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.logo-grid-header {
+  width: 100%;
   display: flex;
+  justify-content: center;
+}
+
+.logo-grid-label {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-kinetic-dark);
+}
+
+.logo-grid-row {
+  display: grid;
+  width: 100%;
+  gap: 20px;
   align-items: center;
-  gap: 30px;
-  min-width: max-content;
-  animation: marqueeScroll 22s linear infinite;
-  will-change: transform;
+  justify-content: center;
+}
+
+.logo-grid-row--top {
+  grid-template-columns: repeat(4, 190px);
+}
+
+.logo-grid-row--bottom {
+  grid-template-columns: repeat(2, 190px);
 }
 
 .logo-chip {
-  flex: 0 0 auto;
   width: 190px;
   height: 100px;
+  padding: 0 16px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 24px;
   display: flex;
@@ -284,25 +315,35 @@ select {
   object-fit: contain;
 }
 
-.campus-img img {
-  max-width: 200px;
-  max-height: 120px;
-  object-fit: contain;
+.logo-chip img.logo-img-uis {
+  max-height: 150px;
 }
 
-.uis-img img {
-  max-width: 200px;
-  max-height: 160px;
-  object-fit: contain;
+.logo-chip img.logo-img-campus {
+  max-height: 108px;
 }
 
-@keyframes marqueeScroll {
-  0% {
-    transform: translateX(0);
+.logo-chip img.logo-img-bid,
+.logo-chip img.logo-img-ministerio {
+  max-height: 61px;
+}
+
+.logo-chip img.logo-img-ktpa {
+  max-height: 72px;
+}
+
+.logo-chip img.logo-img-eurecat {
+  max-height: 51px;
+}
+
+@media (max-width: 920px) {
+  .logo-grid-row--top,
+  .logo-grid-row--bottom {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 
-  100% {
-    transform: translateX(-50%);
+  .logo-chip {
+    width: 100%;
   }
 }
 
