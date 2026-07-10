@@ -5,13 +5,11 @@
   --color-kinetic-dark: #004e70;
   --color-kinetic-medium: #003b5d;
   --color-electric-accent: #94b4c4;
-  --color-deep-blue: #004e70;
   --color-steel-blue: #3c3b3b;
   --color-sky-blue: #94b4c4;
   --color-light-sky: #c8e4ed;
   --color-neutral-warm: #3c3b3b;
   --color-whatsapp-green: #3c3b3b;
-  --color-error: #ef4444;
 
   --font-sans: "Poppins", sans-serif;
   --font-body: "Poppins", sans-serif;
@@ -308,15 +306,6 @@ select {
   }
 }
 
-.logo-marquee-mask {
-  width: 100%;
-  overflow: hidden;
-}
-
-.logo-marquee:hover {
-  animation-play-state: paused;
-}
-
 .hero-center-content {
   transition:
     transform 0.5s ease,
@@ -333,23 +322,6 @@ select {
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-}
-
-.site-index-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 46px;
-  height: 34px;
-  padding: 0 12px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 9999px;
-  font-family: var(--font-sans);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 /* Botones de Navegación */
@@ -380,76 +352,6 @@ select {
 
 .btn-nav-register:active {
   transform: scale(0.95);
-}
-
-/* Botón Hamburguesa Móvil */
-.mobile-menu-toggler {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 8px;
-  color: #d1d5db;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-menu-toggler:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Menú Desplegable de Móviles */
-.mobile-dropdown-menu {
-  display: none;
-  position: fixed;
-  top: 68px;
-  left: 0;
-  width: 100%;
-  background-color: rgba(3, 4, 22, 0.98);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 24px;
-  flex-direction: column;
-  gap: 24px;
-  text-align: center;
-  z-index: 39;
-}
-
-.mobile-dropdown-menu.show {
-  display: flex;
-}
-
-.mobile-link {
-  background: none;
-  border: none;
-  font-family: inherit;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.mobile-link:hover {
-  color: var(--color-light-sky);
-}
-
-.mobile-link:last-of-type {
-  border-bottom: none;
-}
-
-.mobile-dropdown-menu .btn-nav-register {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 14px;
-  border-radius: 12px;
 }
 
 /* 6. Sección de Portada (Hero) */
@@ -490,7 +392,6 @@ select {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  z-index: 20;
   text-align: center;
   background: linear-gradient(
     180deg,
@@ -553,15 +454,6 @@ select {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.hero-center-overline {
-  font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-light-sky);
-  text-transform: uppercase;
 }
 
 .hero-center-title {
@@ -681,35 +573,6 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.bento-background-text {
-  position: absolute;
-  right: -32px;
-  bottom: -32px;
-  font-size: 180px;
-  color: #ffffff;
-  pointer-events: none;
-  user-select: none;
-  font-family: var(--font-display);
-  font-weight: 900;
-  transition: opacity 0.3s ease;
-}
-
-.bento-card-left:hover .bento-background-text {
-  opacity: 0.1;
-}
-
-.bento-section-badge {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-light-sky);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .bento-title {
@@ -859,44 +722,6 @@ select {
   margin: 0;
 }
 
-.testimonials-carousel-container .mini-galeria-flecha {
-  top: 50%;
-}
-
-.testimonials-carousel-container .mini-galeria-flecha.izq {
-  left: 8px;
-}
-
-.testimonials-carousel-container .mini-galeria-flecha.der {
-  right: 8px;
-}
-
-.mini-galeria-indicadores {
-  position: absolute;
-  bottom: 16px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  z-index: 10;
-}
-
-.mini-galeria-punto {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.mini-galeria-punto.activa {
-  width: 18px;
-  border-radius: 10px;
-  background: var(--color-sky-blue);
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-}
-
 /* Bento Derecha - Las Imágenes flotantes */
 .bento-card-right-grid {
   display: grid;
@@ -980,22 +805,6 @@ select {
   text-transform: uppercase;
   margin-top: 8px;
   align-items: center;
-}
-
-.stat-growth-badge {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  color: var(--color-kinetic-dark);
-  background-color: rgba(148, 180, 196, 0.15);
-  padding: 2px 8px;
-  border-radius: 9999px;
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.stat-item:hover .stat-growth-badge {
-  opacity: 1;
 }
 
 /* Panel Dinámico de Análisis Métrico */
@@ -1213,23 +1022,6 @@ select {
   pointer-events: none;
 }
 
-.program-elite-badge {
-  background: rgba(44, 170, 255, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 4px 10px;
-  border-radius: 9999px;
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--color-light-sky);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 1px solid rgba(44, 170, 255, 0.3);
-  align-self: flex-start;
-  margin-bottom: 12px;
-}
-
 .program-card-title {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
@@ -1288,29 +1080,6 @@ select {
   outline-offset: -4px;
 }
 
-.program-tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.program-tech-tag {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.program-tech-tag.more {
-  background-color: rgba(27, 0, 191, 0.4);
-  color: var(--color-sky-blue);
-  border: 1px solid rgba(27, 0, 191, 0.5);
-}
-
 /* decorador brillante footer de la carta de programas */
 .program-bottom-bar {
   position: absolute;
@@ -1329,16 +1098,6 @@ select {
 
 .program-card:hover .program-bottom-bar {
   opacity: 1;
-}
-
-.programs-footnote {
-  text-align: center;
-  font-family: var(--font-sans);
-  font-size: 12px;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 24px;
 }
 
 /* 10. Sección Métodologia (Nuestra Esencia) */
@@ -1534,35 +1293,6 @@ select {
     opacity 0.7s ease;
 }
 
-.testimonial-video-player {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.testimonial-reel-card.is-playing .testimonial-video-player {
-  opacity: 1;
-}
-
-.testimonial-reel-card.is-playing .testimonial-bg-img {
-  opacity: 0;
-}
-
-.testimonial-reel-card.is-playing .testimonial-overlay-fade {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.35) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
 .testimonial-reel-card:hover .testimonial-bg-img {
   transform: scale(1.05);
 }
@@ -1598,20 +1328,6 @@ select {
   right: 20px;
   z-index: 20;
   pointer-events: none;
-}
-
-.testimonial-corp-badge {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-light-sky);
-  text-transform: uppercase;
-  display: inline-block;
-  background: rgba(44, 170, 255, 0.2);
-  padding: 2px 10px;
-  border-radius: 9999px;
-  margin-bottom: 4px;
 }
 
 .testimonial-name {
@@ -2427,6 +2143,7 @@ select {
   /* Hero */
   .hero-video-container {
     aspect-ratio: 21 / 9;
+    z-index: 0;
   }
 
   .mute-text {
