@@ -377,10 +377,7 @@ select {
   height: 100%;
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
-  object-position: center center;
   transform: none;
-  pointer-events: none;
   display: block;
 }
 
@@ -398,6 +395,7 @@ select {
     rgba(3, 4, 22, 0.18) 0%,
     rgba(3, 4, 22, 0.35) 100%
   );
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
